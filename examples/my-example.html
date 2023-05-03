@@ -43,6 +43,7 @@
         },
       });
     </script>
+    <link rel="stylesheet" type="text/css" href="/css/style.css" />
   </head>
   <body>
     <a-scene
@@ -50,6 +51,7 @@
     app: myApp;
     room: room1;
     debug: true;
+    adapter: easyrtc;
     audio: true;
   "
     >
@@ -70,7 +72,7 @@
           src="assets/high-detailed-rex-animation/source/Rampaging T-Rex.glb"
         ></a-asset-item>
         <template id="avatar-template">
-          <a-entity class="avatar">
+          <a-entity class="avatar" networked-audio-source>
             <a-entity
               class="face"
               position="0 0 0"
@@ -109,5 +111,28 @@
 
       <a-sky src="#sky" rotation="0 -90 0"></a-sky>
     </a-scene>
+
+    <div class="actions">
+      <button id="mic-btn" type="button" class="button">Mute Mic</button>
+    </div>
+
+    <script>
+      // Mic status
+      let micEnabled = true;
+      // Mic button element
+      const micBtnEle = document.getElementById("mic-btn");
+
+      // Called by Networked-Aframe when connected to server
+      function onConnect() {
+        console.log("onConnect", new Date());
+
+        // Handle mic button click (Mute and Unmute)
+        micBtnEle.addEventListener("click", function () {
+          NAF.connection.adapter.enableMicrophone(!micEnabled);
+          micEnabled = !micEnabled;
+          micBtnEle.textContent = micEnabled ? "Mute Mic" : "Unmute Mic";
+        });
+      }
+    </script>
   </body>
 </html>
