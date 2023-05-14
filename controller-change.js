@@ -1,9 +1,9 @@
 const imageBtnEle = document.getElementById("image-btn");
 const planeElement = document.getElementById("medical-image");
 const imagesArray = [
-  "/examples/img/ray1.jpg",
-  "/examples/img/ray2.jpg",
-  "/examples/img/ray3.jpg"
+  "https://github.com/Angelinis/naf-tutorial.github.io/blob/main/examples/img/ray1.jpg",
+  "https://github.com/Angelinis/naf-tutorial.github.io/blob/main/examples/img/ray2.jpg",
+  "https://github.com/Angelinis/naf-tutorial.github.io/blob/main/examples/img/ray3.jpg"
 ]
 
 function onConnect() {
