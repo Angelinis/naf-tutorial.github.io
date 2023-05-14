@@ -5,6 +5,13 @@
   left: 3%;
 }
 
+#image-btn {
+  position: absolute;
+  display: flex;
+  bottom: 3%;
+  left: 3%;
+}
+
 .actions .button {
   cursor: pointer;
   background: #fff;
