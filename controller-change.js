@@ -1,4 +1,6 @@
 const imageBtnEle = document.getElementById("image-btn");
+const sceneEl = document.querySelector('a-scene');
+const arSystem = sceneEl.systems["mindar-face-system"];
 const planeElement = document.getElementById("medical-image");
 const switchCameraButton = document.getElementById("camera-btn");
 const imagesArray = [
@@ -10,6 +12,7 @@ const imagesArray = [
 function onConnect() {
   planeElement.setAttribute('src', imagesArray[0]);
   switchCameraButton.addEventListener('click', () => {
+
 	  arSystem.switchCamera();
 	});
 
