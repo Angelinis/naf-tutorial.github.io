@@ -1,3 +1,5 @@
+
+document.addEventListener("DOMContentLoaded", function() {
 const imageBtnEle = document.getElementById("image-btn");
 const sceneEl = document.querySelector('a-scene');
 const arSystem = sceneEl.systems["mindar-face-system"];
@@ -9,7 +11,6 @@ const imagesArray = [
   "./examples/img/ray3.jpg?raw=true"
 ]
 
-function onConnect() {
   planeElement.setAttribute('src', imagesArray[0]);
   switchCameraButton.addEventListener('click', () => {
 
@@ -20,7 +21,6 @@ imageBtnEle.addEventListener("click", function () {
   let index = imagesArray.indexOf(planeElement.getAttribute("src"));
   planeElement.setAttribute('src', imagesArray[index + 1]);
 });
-}
 
-onConnect();
 
+})
