@@ -19,9 +19,7 @@ If you want to learn more about `A-frame`, see [the guidelines to code with A-fr
 Getting Started
 ---------------
 
-You can access the live version of this repo through github pages [here][here]. 
-
-[here]: (https://angelinis.github.io/naf-tutorial.github.io/)
+You can access the live version of this repo through github pages here: https://angelinis.github.io/naf-tutorial.github.io/. 
 
 Contributions
 -------------
